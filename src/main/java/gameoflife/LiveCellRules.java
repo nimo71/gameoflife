@@ -1,10 +1,11 @@
 package gameoflife;
 
-public class LiveCellRules {
+public class LiveCellRules implements CellRules {
 
-	public Boolean shouldLive(int i) {
-		// TODO Auto-generated method stub
-		return null;
+	@Override
+	public Boolean shouldLive(int neigbourCount) {
+		if (neigbourCount == 2 || neigbourCount == 3) return true;
+		return false;
 	}
 
 }
