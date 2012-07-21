@@ -3,16 +3,17 @@ package gameoflife;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
-import java.util.Set;
+import java.util.*;
 
 import org.junit.Test;
 
 public class NeighbourSelectTest {
 
+	NeighbourSelect selector = new LiveCells(Collections.<Position>emptyList(), null);
+	
 	@Test
 	public void selectNeighbourPositions() {
 		Position pos = new Position(10, 10);
-		NeighbourSelect selector = new NeighbourSelect();
 		Set<Position> neighbours = selector.neighbours(pos);
 		
 		Position[] expectedNeighbours = new Position[] { 

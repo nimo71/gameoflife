@@ -48,5 +48,10 @@ public class Position {
 			return false;
 		return true;
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("(%d, %d)", x, y);
+	}
 
 }

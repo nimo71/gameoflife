@@ -3,8 +3,9 @@ package gameoflife;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-import org.junit.Before;
-import org.junit.Test;
+import java.util.Collections;
+
+import org.junit.*;
 
 public class LiveCellRulesTest {
 
@@ -12,7 +13,7 @@ public class LiveCellRulesTest {
 
 	@Before
 	public void beforeEachTest() {
-		liveCellRules = new LiveCellRules();
+		liveCellRules = new LiveCells(Collections.<Position>emptyList(), null);
 	}
 
 	@Test
